@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex 布局</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: rgb(202, 231, 231)
+        }
+
+        /* * {
+            border: 1px solid black;
+        } */
+
+        .flex {
+            display: flex;
+        }
+
+        .baise {
+            background-color: white;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .row {
+            flex.direction: row;
+        }
+
+        .mg8 {
+            margin: 8px;
+        }
+
+        .mgr8 {
+            margin-right: 8px;
+        }
+
+        .mgt8 {
+            margin-top: 8px;
+        }
+
+        .yinying {
+            box-shadow: rgb(0 0 0/20%)0px 2px 1px -1px, rgb(0 0 0/14%)0px 1px 1px 0px, rgb(0 0 0/12%)0px 1px 3px 0px;
+        }
+
+        .daohang {
+            padding: 10px 20px;
+            border-bottom: 1px solid #c2bfbf;
+            font-size: 14px;
+            color: #666
+        }
+    </style>
+</head>
+
+<body class="flex">
+    <!--侧边栏-->
+    <div style="width:200px;z-index:2" class="baise yinying">
+        <div class="flex" style="justify-content:center;align-items:center;padding:10px;border-bottom:1px solid #999">
+            <img src="121.jpg" width="100px" height="130px" alt="">
+            <div style="margin-left:8px">我的网页</div>
+        </div>
+        <!--导航条-->
+        <div class="flex1">
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+        </div>
+
+
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex column">
+        <!--头部栏-->
+        <div style="height:60px;z-index:1" class="baise yinying">
+        </div>
+        <!--内容栏-->
+        <div style="overflow: auto;" class="flex1 flex">
+            <!--左栏-->
+            <div style="flex:3" class="flex column mg8">
+                <!--数据区-->
+                <div class="flex">
+                    <!--数据块-->
+                    <div style="height: 100px;" class="flex1 baise yinying mgr8"></div>
+                    <!--数据块-->
+                    <div style="height: 100px;" class="flex1 baise yinying mgr8"></div>
+                    <!--数据块-->
+                    <div style="height: 100px;" class="flex1 baise yinying mgr8"></div>
+                    <!--数据块-->
+                    <div style="height: 100px;" class="flex1 baise yinying"></div>
+                </div>
+                <!--列表区-->
+                <div class="flex column">
+                    <!--列表项-->
+                    <div style="height: 160px;" class="baise yinying mgt8"></div>
+                    <!--列表项-->
+                    <div style="height: 160px;" class="baise yinying mgt8"></div>
+                    <!--列表项-->
+                    <div style="height: 160px;" class="baise yinying mgt8"></div>
+                    <!--列表项-->
+                    <div style="height: 160px;" class="baise yinying mgt8"></div>
+                    <!--列表项-->
+                    <div style="height: 160px;" class="baise yinying mgt8"></div>
+                    <!--列表项-->
+                    <div style="height: 160px;" class="baise yinying mgt8"></div>
+                </div>
+
+            </div>
+            <!--右栏-->
+            <div style="flex:1" class="flex column">
+                <!--提示区-->
+                <div style="height: 150px;" class="baise yinying mgt8 mgr8"></div>
+                <!--消息区-->
+                <div style="height: 300px;" class="baise yinying mgt8 mgr8"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
